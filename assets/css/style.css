@@ -1,0 +1,300 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+	padding: 0;
+	list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+
+
+body {
+	min-height: 100vh;
+
+	scroll-behavior: smooth;
+
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+
+	color: #544837;
+}
+
+.container {
+	max-width: 1124px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+
+.title {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 54px;
+	color: #2F281E;
+}
+
+/* Header */
+.header {
+	margin-bottom: 50px;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 78px;
+}
+
+
+.menu {
+	width: 327px;
+	margin-left: auto;
+	/* С помощью этого свойства отодвинули меню на максимальное расстояние вправо */
+}
+
+.menu__list {
+	display: flex;
+}
+
+/* Задаем отступ справа у элементов меню */
+/* Можно записать так (Запись номер 1)
+В ней сказано, что если у menu__list-item есть сосед, то ему применяется свойство ниже. Первому элементы menu__list-item это свойство не применяется, потому что элемент не является соседом. */
+.menu__list-item+.menu__list-item {
+	margin-left: 24px;
+}
+
+/* Если не используем первую запись, то отступ у первого элемента можно убрать так*/
+/* .menu__list-item:first-child {
+	margin-left: 0;
+} */
+
+.menu__list-link {
+	font-size: 14px;
+	font-weight: 400;
+	color: #2F281E;
+	text-decoration: none;
+	line-height: 28px;
+}
+
+/* Задаем внешние отступы для кнопок */
+.user__nav {
+	margin-left: 52px;
+	margin-right: 13px;
+}
+
+.user__nav-link {
+	font-size: 16px;
+	font-weight: 600;
+	color: #173A56;
+	text-decoration: none;
+
+	padding: 11px 24px;
+
+	border: 1px solid #BCD0E5;
+	border-radius: 4px;
+}
+
+/* Задаем отступы между двумя кнопками используя уже известную конструкцию, которую использовали выше */
+.user__nav-link+.user__nav-link {
+	color: #fff;
+	background: #FF9900;
+
+	margin-left: 14px;
+	border: none;
+	/* Можно установить значения: 0 или transparrent или none */
+}
+
+
+/* Top */
+/* .top {
+	padding: 50px 0;
+} */
+
+
+.top__inner {
+	background: url(../Images/Top/top-bg.svg) center right no-repeat;
+	padding: 83px 0;
+}
+
+
+.top__content {
+	max-width: 472px;
+}
+
+.top__title {
+	font-size: 44px;
+	line-height: 54px;
+	color: #2F281E;
+
+	margin-bottom: 30px;
+}
+
+.top__text {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 28px;
+
+	margin-bottom: 54px;
+}
+
+.top__btn {
+	cursor: pointer;
+
+	display: inline-block;
+	padding: 15px 41px 14px;
+	background: #FF9900;
+	border: none;
+	border-radius: 4px;
+
+	color: #fff;
+	font-weight: 700;
+
+	margin-right: 30px;
+}
+
+.top__link {
+	display: inline-block;
+	color: #FF9900;
+	font-weight: 600;
+	line-height: 24px;
+	padding-left: 26px;
+
+	position: relative;
+}
+
+.top__link:before {
+	content: "";
+	width: 17px;
+	height: 20px;
+	left: 0;
+	top: 1px;
+
+	background: url(../Images/Top/top_play-icon.svg);
+	
+	position: absolute;
+}
+
+
+/* Tools */
+.tools {
+	padding: 111px 0 90px;
+}
+
+
+/* Можем задать фоновое изображение модификатору секции, создав уникальный класс, в конкретном случае этот вариант не подходит, но для полноэкраееых изображени подойдет */
+/* .tools--bg {
+	background: url(../Images/Tools/tools-bg.svg) center bottom no-repeat;
+	background-size: cover;
+} */
+
+.tools__inner {
+	background: url(../Images/Tools/tools-bg.svg) center bottom no-repeat;
+	background-size: cover;
+	padding-bottom: 90px;
+}
+
+.tools__title {
+	font-size: 36px;
+	line-height: 54px;
+	font-weight: 700;
+	color: #2F281E;
+	text-align: center;
+
+	margin: 0 auto 54px;
+	max-width: 539px;
+}
+
+.tools__items{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 14px;
+	margin-bottom: 34px;
+}
+
+.tools__item {
+	max-width: 240px;
+}
+
+.tools__item+.tools__item {
+	margin-left: 46px;
+}
+
+.tools__item-img {
+margin-bottom: 30px;
+}
+
+.tools__item-title {
+font-weight: 600;
+font-size: 22px;
+line-height: 33px;
+color: #2F281E;
+
+margin-bottom: 13px;
+}
+
+
+.tools__item-text {
+font-weight: 500;
+font-size: 16px;
+line-height: 26px;
+
+color: #544837;
+}
+
+.tools__link {
+	width: 175px;
+	border-radius: 4px;
+	background-color: #FF9900;
+
+	display: block;
+	padding: 14px 33px 15px;
+	margin: 0 auto;
+
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+}
